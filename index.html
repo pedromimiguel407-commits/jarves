@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://text.pollinations.ai" crossorigin><link rel="dns-prefetch" href="https://image.pollinations.ai">
+<link rel="preload" href="style.css" as="style">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JARVES AI V27 — Free AI Engine</title>
+<meta name="description" content="JARVIS AI Engine V27: assistente universal com chat, código, geração e ferramentas. Interface otimizada para desktop e celular.">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#050a14"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside id="side">
+  <div class="brand"><img class="logo" src="assets/icon.svg" alt="JARVES AI"><div><b id="aname">JARVES AI</b><small>THINK SMART. BUILD ANYTHING. CREATE THE FUTURE.</small></div></div>
+  <nav id="nav"></nav>
+  <div class="status"><span id="dot" class="dot"></span><span id="stxt">IA não configurada</span></div>
+</aside>
+<main>
+  <header><button id="burger" aria-label="Menu">☰</button><h1 id="title">Home</h1><span id="net" class="chip"></span></header>
+  <section id="view"></section>
+</main>
+<div id="toasts"></div>
+<dialog id="dlg"></dialog>
+<script src="data/templates.js"></script>
+<script src="data/config.js"></script>
+<script src="script.js"></script>
+<script src="data/v21.js"></script>
+<script src="data/v24.js"></script>
+<script>if("serviceWorker" in navigator && location.protocol.startsWith("http")){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(e=>console.warn("PWA indisponível:",e)));}</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: jarves-ai
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /v1/health
+    disk:
+      name: jarves-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: KEYS_FILE
+        value: /var/data/keys.json
+      - key: PUBLIC_SIGNUP
+        value: "1"
+      - key: RATE_LIMIT_PER_MIN
+        value: "30"
+      - key: DISABLE_FREE_FALLBACK
+        value: "0"
