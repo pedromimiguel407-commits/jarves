@@ -46,7 +46,7 @@ class MainActivity : ComponentActivity() {
                 onPrimary = Ink, onBackground = Color.White, onSurface = Color.White
             )) {
                 JarvesApp(
-                    load = { securePrefs().getString("base_url", "") ?: "" to (securePrefs().getString("api_key", "") ?: "") },
+                    load = { (securePrefs().getString("base_url", "") ?: "") to (securePrefs().getString("api_key", "") ?: "") },
                     save = { url, key ->
                         securePrefs().edit().putString("base_url", url).putString("api_key", key).apply()
                     }
